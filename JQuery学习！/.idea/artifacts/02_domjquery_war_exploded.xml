@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="02_dom对象和jquery对象互相转换:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/02_domjquery_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="02_dom对象和jquery对象互相转换/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="02_dom对象和jquery对象互相转换" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

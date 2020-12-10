@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/02_dom对象和jquery对象互相转换/02_dom对象和jquery对象互相转换.iml" filepath="$PROJECT_DIR$/02_dom对象和jquery对象互相转换/02_dom对象和jquery对象互相转换.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03_选择器的使用/03_选择器的使用.iml" filepath="$PROJECT_DIR$/03_选择器的使用/03_选择器的使用.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04_过滤器的使用/04_过滤器的使用.iml" filepath="$PROJECT_DIR$/04_过滤器的使用/04_过滤器的使用.iml" />
+    </modules>
+  </component>
+</project>

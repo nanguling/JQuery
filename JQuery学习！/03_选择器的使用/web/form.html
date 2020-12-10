@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单选择器的使用</title>
+    <style type="text/css">
+
+    </style>
+    <script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
+    <script type="text/javascript">
+        function fun1() {
+            //使用表单选择器
+            var obj = $(":text");
+            alert(obj.val());//val()是jquery中函数，用来读取value属性值
+        }
+
+        function fun2() {
+            var obj = $(":radio");//obj是数组，现在有两个成员
+            //循环遍历数组，数组中的成员是dom对象，可以直接使用dom对象属性或函数来读取value值
+            for (var i = 0;i < obj.length;i++) {
+                //从数组获取成员，使用下标获取
+                var dom = obj[i];
+                //使用dom对象属性，读取value值
+                alert(dom.value);
+            }
+        }
+
+        function fun3() {
+            var obj = $(":checkbox");//obj是一个数组，此时有三个成员
+            for (var i = 0;i < obj.length;i++) {
+                // var dom = obj[i];
+                // alert(dom.value);
+                //使用jquery的val函数，来获取value值
+                //1.需要jquery对象
+                var jobj = $(obj[i])
+                //2.使用val函数获取value值
+                alert("jquery的函数调用:"+jobj.val())
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" value="我是文本框"/><br>
+    <input type="radio" value="我是单选框1"/><br>
+    <input type="radio" value="我是单选框2"/><br>
+    <input type="checkbox" value="我是多选框1"/><br>
+    <input type="checkbox" value="我是多选框2"/><br>
+    <input type="checkbox" value="我是多选框3"/><br>
+    <input type="button" value="读取text的值" onclick="fun1()"/><br>
+    <input type="button" value="读取radio的值" onclick="fun2()"/><br>
+    <input type="button" value="读取checkbox的值" onclick="fun3()"/><br>
+</body>
+</html>

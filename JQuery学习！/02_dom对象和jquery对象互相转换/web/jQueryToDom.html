@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery对象转为dom</title>
+    <script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
+    <script type="text/javascript">
+        function btnClick() {
+            //使用jquery的语法，获取页面中的dom对象
+            //var obj = $("#two")[0];//从数组中获取下标是0的dom对象
+            var obj = $("#two").get(0);
+            // alert(obj.value);
+            var num = obj.value;
+            obj.value = num*num;
+        }
+
+    </script>
+</head>
+<body>
+    <div>
+        <input type="button" value="计算平方" onclick="btnClick()"><br>
+        <input type="text" id="two" value="整数">
+    </div>
+</body>
+</html>

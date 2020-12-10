@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单过滤器的使用</title>
+    <style type="text/css">
+        div{
+            background: gray;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
+    <script type="text/javascript">
+        //$(document).ready(函数):当页面中的dom对象加载成功后，会执行ready()，相当于onload事件
+        $(function () {
+            //当页面dom对象加载后，给对象绑定事件，因为此时button对象已经在内存中创建好了，才能使用
+            $("#btn1").click(function () {
+                //获取所有可以使用的text
+                 var obj = $(":text:enabled");
+                 //设置jquery数组中所有dom对象的value值
+                 obj.val("hello");
+            })
+
+            //绑定事件
+            $("#btn2").click(function () {
+                //获取所有选中的复选框
+                var obj = $(":checkbox:checked");
+                //获取jquery数组中所有dom对象的value值
+                for (var i = 0;i < obj.length;i++) {
+                    //alert(obj[i].value);
+                    alert($(obj[i]).val())
+                }
+            })
+
+            //绑定事件
+            $("#btn3").click(function () {
+                //获取所有选中的下拉列表框
+                //var obj = $("select>option:selected")
+                var obj = $("#yuyan>option:selected")
+                alert(obj.val())
+            })
+        })
+    </script>
+</head>
+<body>
+    <input type="text" id="txt1" value="text1"><br>
+    <input type="text" id="txt2" value="text2" disabled="true"><br>
+    <input type="text" id="txt3" value="text3"><br>
+    <input type="text" id="txt4" value="text4" disabled><br><br>
+    <input type="checkbox" value="游泳">游泳<br>
+    <input type="checkbox" value="健身" checked="true">健身<br>
+    <input type="checkbox" value="了解一下" checked>了解一下<br><br>
+    <select id="yuyan">
+        <option value="java">java语言</option>
+        <option value="go" selected>go语言</option>
+        <option value="c++">c++语言</option>
+    </select><br>
+    <input type="button" value="设置可用的text的value为hello" id="btn1"><br>
+    <button id="btn2">显示选中的复选框的值</button><br>
+    <button id="btn3">显示选中的下拉列表框的值</button><br>
+</body>
+</html>

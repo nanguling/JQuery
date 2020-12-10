@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基本选择器的使用</title>
+    <style type="text/css">
+        div{
+            background: gray;
+            width: 200px;
+            height: 100px;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
+    <script type="text/javascript">
+        function fun1() {
+            //id选择器
+            var obj = $("#one");
+            //使用jquery中改变样式的函数
+            obj.css("background","red");
+        }
+
+        function fun2() {
+            //样式选择器
+            var obj = $(".two");
+            obj.css("background","yellow");
+        }
+
+        function fun3() {
+            //标签选择器
+            var obj = $("div");//数组有3个dom对象
+            //jquery的操作都是操作数组中的全部成员
+            //所以是给所有div都设置了背景色
+            obj.css("background","blue");
+        }
+
+        function fun4() {
+            //所有选择器
+            var obj = $("*");
+            obj.css("background","pink");
+        }
+
+        function fun5() {
+            //组合选择器
+            var obj = $("#one,span");
+            obj.css("background","orange");
+        }
+    </script>
+</head>
+<body>
+    <div id="one">我是id是one的div</div><br>
+    <div class="two">我是样式是two的div</div><br>
+    <div>我是没有id和class的div</div><br>
+    <span>我是span标签</span><br>
+    <input type="button" value="获取id是one的dom对象" onclick="fun1()"><br>
+    <input type="button" value="获取class是two的dom对象" onclick="fun2()"><br>
+    <input type="button" value="使用标签选择器获取dom对象" onclick="fun3()"><br>
+    <input type="button" value="所有选择器" onclick="fun4()"><br>
+    <input type="button" value="组合选择器" onclick="fun5()"><br>
+</body>
+</html>

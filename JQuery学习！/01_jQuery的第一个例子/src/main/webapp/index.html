@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第一个栗子</title>
+    <!--指定jQuery的库文件位置，使用相对路径，当前项目的js目录下的指定文件-->
+    <script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
+    <script type="text/javascript">
+        /**
+         * 1.$(document),$是jQuery中的函数名称，document是函数的参数，作用是将document对象变成jQuery函数库可以使用的对象
+         * 2.ready，是jquery中的函数，是准备的意思，当页面的dom对象加载成功后会执行ready函数的内容。ready相当于js中onload事件
+         * 3.function ()，自定义函数表示onload后要执行的功能
+         */
+        $(document).ready(function () {
+            //自定义功能代码
+            alert("hello jquery")
+        })
+
+        $(function () {
+            alert("简写方式的入口函数")
+        })
+    </script>
+</head>
+<body>
+
+</body>
+</html>
