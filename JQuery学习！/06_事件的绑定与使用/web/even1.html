@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单过滤器的使用</title>
+    <style type="text/css">
+        div{
+            background: lightpink;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
+    <script type="text/javascript">
+        //入口函数,在dom对象创建好后
+        $(function () {
+            //绑定事件btn1
+            $("#btn1").click(function () {
+                //使用append增加一个dom对象
+                $("#mydiv").append("<input type='button' value='新加的按钮' id='newbtn'>")
+                //给新增的按钮绑定单击事件
+                $("#newbtn").on("click",function () {
+                    alert("新增的按钮被单击了")
+                })
+            })
+
+
+        })
+    </script>
+</head>
+<body>
+    <div id="mydiv">我是一个div，需要增加一个button</div><br><br>
+
+    <input type="button" value="创建一个button,绑定一个click" id="btn1"><br><br>
+    <input type="button" value="使用empty删除子对象" id="btn2"><br><br>
+    <input type="button" value="使用append增加dom对象" id="btn3"><br><br>
+    <input type="button" value="获取第一个dom的文本值" id="btn4"><br><br>
+    <input type="button" value="设置span标签所有dom的文本值" id="btn5"><br><br>
+    <input type="button" value="循环普通数组" id="btn6"><br><br>
+    <input type="button" value="循环json数组" id="btn7"><br><br>
+    <input type="button" value="循环dom数组" id="btn8"><br><br>
+    <input type="button" value="循环jquery对象" id="btn9"><br><br>
+</body>
+</html>

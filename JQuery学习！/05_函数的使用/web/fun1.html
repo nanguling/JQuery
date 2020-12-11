@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单过滤器的使用</title>
+    <style type="text/css">
+        div{
+            background: lightpink;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
+    <script type="text/javascript">
+        //入口函数,在dom对象创建好后
+        $(function () {
+            //绑定事件btn1
+            $("#btn1").click(function () {
+                //val()，获取dom数组中第一个对象的value属性值
+                var text = $(":text").val();
+                alert(text);
+            })
+
+            //绑定事件btn2
+            $("#btn2").click(function () {
+                //设置所有text的value值为新值
+                $(":text").val("薇姐");
+            })
+
+            //绑定事件btn3
+            $("#btn3").click(function () {
+                //text()，获取所有dom对象的文本值，连接成一个字符串
+                var text = $("div").text();
+                alert(text);
+            })
+
+            //绑定事件btn4
+            $("#btn4").click(function () {
+                //设置div的文本值
+                $("div").text("hello world");
+            })
+
+            //绑定事件btn5
+            $("#btn5").click(function () {
+                //读取指定属性的值
+                var src = $("#img1").attr("src");
+                alert(src);
+            })
+
+            //绑定btn6
+            $("#btn6").click(function () {
+                //设置指定属性的值
+                $("img").attr("src","img/薇姐 (2).jpg");
+            })
+        })
+    </script>
+</head>
+<body>
+    <input type="text" value="刘备"><br>
+    <input type="text" value="关羽"><br>
+    <input type="text" value="张飞"><br><br>
+    <div>我是第一个div</div>
+    <div>我是第二个div</div>
+    <div>我是第三个div</div><br><br>
+    <img src="img/薇姐.jpg" id="img1" width="100px" height="100px"><br><br>
+
+    <input type="button" value="获取第一个文本框的值" id="btn1"><br><br>
+    <input type="button" value="设置所有文本框的value值" id="btn2"><br><br>
+    <input type="button" value="获取所有div的文本值" id="btn3"><br><br>
+    <input type="button" value="设置所有div的文本值" id="btn4"><br><br>
+    <input type="button" value="读取src属性的值" id="btn5"><br><br>
+    <input type="button" value="设置指定属性的值" id="btn6"><br><br>
+</body>
+</html>
